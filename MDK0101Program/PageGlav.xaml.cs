@@ -24,5 +24,14 @@ namespace MDK0101Program
         {
             InitializeComponent();
         }
+
+        private void BtnAvt_Click(object sender, RoutedEventArgs e)
+        {
+            FrameClass.frameMain.Navigate(new PageAvt());
+        }
+        private void BtnReg_Click(object sender, RoutedEventArgs e)
+        {
+            FrameClass.frameMain.Navigate(new PageReg());
+        }
     }
 }

@@ -17,17 +17,17 @@
             <StackPanel>
                 <TextBlock Text="Регистрация" FontSize="30" FontWeight="Bold" Margin="0 0 0 10" HorizontalAlignment="Center"></TextBlock>
                 <TextBlock Text="Заполните поля" FontSize="15" HorizontalAlignment="Center" Margin="0 0 0 10"></TextBlock>
-                <TextBox materialDesign:HintAssist.Hint="Введиите Фамилию" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-                <TextBox materialDesign:HintAssist.Hint="Введиите Имя" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-                <TextBox materialDesign:HintAssist.Hint="Введиите Отчество" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-                <TextBox materialDesign:HintAssist.Hint="Введиите Логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-                <PasswordBox materialDesign:HintAssist.Hint="Введиите Пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
-                <ComboBox x:Name="Pol" materialDesign:HintAssist.Hint="Выберите Пол" Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                <TextBox materialDesign:HintAssist.Hint="Введиите Фамилию" Style="{DynamicResource MaterialDesignFloatingHintTextBox}"/>
+                <TextBox materialDesign:HintAssist.Hint="Введиите Имя" Style="{DynamicResource MaterialDesignFloatingHintTextBox}"/>
+                <TextBox materialDesign:HintAssist.Hint="Введиите Отчество" Style="{DynamicResource MaterialDesignFloatingHintTextBox}"/>
+                <TextBox materialDesign:HintAssist.Hint="Введиите Логин" Style="{DynamicResource MaterialDesignFloatingHintTextBox}"/>
+                <PasswordBox materialDesign:HintAssist.Hint="Введиите Пароль" Style="{DynamicResource MaterialDesignFloatingHintPasswordBox}"/>
+                <ComboBox x:Name="Pol" materialDesign:HintAssist.Hint="Выберите Пол" Style="{DynamicResource MaterialDesignFloatingHintComboBox}">
                     <TextBlock>Мужской</TextBlock>
                     <TextBlock>Женский</TextBlock>
                 </ComboBox>
-                <DatePicker Name ="DP" materialDesign:HintAssist.Hint="Введите Дату Рождения" Style="{StaticResource MaterialDesignFloatingHintDatePicker}"></DatePicker>
-                <ComboBox x:Name="Role" materialDesign:HintAssist.Hint="Выберите Роль" Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                <DatePicker Name ="DP" materialDesign:HintAssist.Hint="Введите Дату Рождения" Style="{DynamicResource MaterialDesignFloatingHintDatePicker}"></DatePicker>
+                <ComboBox x:Name="Role" materialDesign:HintAssist.Hint="Выберите Роль" Style="{DynamicResource MaterialDesignFloatingHintComboBox}">
                     <TextBlock>Пользователь</TextBlock>
                     <TextBlock>Администратор</TextBlock>
                 </ComboBox>

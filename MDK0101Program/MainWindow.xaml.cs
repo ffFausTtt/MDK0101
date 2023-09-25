@@ -23,6 +23,9 @@ namespace MDK0101Program
         public MainWindow()
         {
             InitializeComponent();
+            Base.dataBase = new Entities();
+            FrameClass.frameMain = mainFrame;
+            mainFrame.Navigate(new PageGlav());
         }
     }
 }
