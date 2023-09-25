@@ -27,11 +27,11 @@ namespace MDK0101Program
 
         private void BtnAvt_Click(object sender, RoutedEventArgs e)
         {
-            FrameClass.frameMain.Navigate(new PageAvt());
+            NavigationService.Navigate(new PageAvt());
         }
         private void BtnReg_Click(object sender, RoutedEventArgs e)
         {
-            FrameClass.frameMain.Navigate(new PageReg());
+            NavigationService.Navigate(new PageReg());
         }
     }
 }
