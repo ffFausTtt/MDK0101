@@ -9,5 +9,5 @@ namespace MDK0101Program
     internal class Base
     {
         public static Entities dataBase;
-    }
+    }  
 }
