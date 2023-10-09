@@ -25,6 +25,13 @@ namespace MDK0101Program
         public PageReg()
         {
             InitializeComponent();
+            CB_Pol.ItemsSource = Base.dataBase.Gender.ToList();
+            CB_Pol.SelectedValue = "ID_Gender";
+            CB_Pol.DisplayMemberPath = "Title";
+
+            CB_Role.ItemsSource = Base.dataBase.Role.ToList();
+            CB_Role.SelectedValue = "ID_Role";
+            CB_Role.DisplayMemberPath = "Title";
         }
 
         private void Reg_Btn(object sender, RoutedEventArgs e)
@@ -74,35 +81,33 @@ namespace MDK0101Program
                 PB_Password.Background = Brushes.LightCoral;
                 MessageBox.Show("Пароль должен содержать не менее 8 символов");
             }
-            else if(true)
+            else if (true)
             {
-                PB_Password.ToolTip = "";
-                PB_Password.Background = Brushes.Transparent;
-                MessageBox.Show("Вы зарегистрировались!");
+                try
+                {
+                    PB_Password.ToolTip = "";
+                    PB_Password.Background = Brushes.Transparent;
+                    User newUser = new User()
+                    {
+                        SurName = TB_Surname.Text,
+                        Name = TB_Name.Text,
+                        Patronymic = TB_Otch.Text,
+                        Login = TB_Login.Text,
+                        Password = PB_Password.Password.GetHashCode().ToString(),
+                        ID_Gender = CB_Pol.SelectedIndex+1,
+                        Date_Of_Birth = Convert.ToDateTime(DP_Date.Text),
+                        ID_Role = CB_Role.SelectedIndex+1,
+                    };
+                    Base.dataBase.User.Add(newUser);
+                    Base.dataBase.SaveChanges();
+                    MessageBox.Show("Вы зарегистрировались!");
+                }
+                catch
+                {
+                    MessageBox.Show("Проверьте заполнение всех полей!");
+                }
             }
-           // if(true)
-            //else if (addUser.fio != null && addUser.login != null && addUser.password != null && addUser.idGender != 0 && addUser.dataBirthday != null)
-            //{
-            //    BaseClass.EM.Users.Add(addUser);
-            //    BaseClass.EM.SaveChanges();
-            //    MessageBox.Show("Регистрация прошла успешно");
-            //    FrameClass.FrameProject.Navigate(new MainPage());
-            //}
-           // else MessageBox.Show("Пожалуйста, заполните все поля!");
-        }
-        //User newUser = new User()
-        //{
-
-        //    Name = TBName.Text,
-        //    Surname = TBSurname.Text,
-        //    DateBirthday = Convert.ToDateTime(DPdate.SelectedDate),
-        //    Role = ((UserRole)CBRole.SelectedItem).id, // определяем роль
-        //    Login = TBLogin.Text,
-        //    Password = PBPass.Password.GetHashCode()
-        //};
-        //Base.dataBase.User.Add(newUser);
-        //Base.dataBase.SaveChanges();
-       // MessageBox.Show("Пользователь добавлен");
         }
     }
+}
 

@@ -10,11 +10,19 @@ namespace MDK0101Program
     public partial class User
     {
         public string gender;
-        public string Gender
+        public string Genders
         {
             get { return gender; }
             set { gender = value; }
-            
+
+        }
+
+        public string role;
+        public string Roles
+        {
+            get { return role; }
+            set { role = value; }
+
         }
     }
     public class Users
@@ -43,6 +51,9 @@ namespace MDK0101Program
                 buff.ID_Gender = user.ID_Gender;
                 buff.Date_Of_Birth = user.Date_Of_Birth;
                 buff.ID_Role = user.ID_Role;
+
+                Role role = Base.dataBase.Role.FirstOrDefault(x => x.ID_Role == buff.ID_Role);
+                buff.role = user.role;
                 users.Add(buff);
             }
             return users;

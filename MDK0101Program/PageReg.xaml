@@ -23,13 +23,13 @@
                 <TextBox x:Name="TB_Login" materialDesign:HintAssist.Hint="Введиите Логин" Style="{DynamicResource MaterialDesignFloatingHintTextBox}"/>
                 <PasswordBox x:Name="PB_Password" materialDesign:HintAssist.Hint="Введиите Пароль" Style="{DynamicResource MaterialDesignFloatingHintPasswordBox}"/>
                 <ComboBox x:Name="CB_Pol" materialDesign:HintAssist.Hint="Выберите Пол" Style="{DynamicResource MaterialDesignFloatingHintComboBox}">
-                    <TextBlock>Мужской</TextBlock>
-                    <TextBlock>Женский</TextBlock>
+                    <!--<TextBlock>Мужской</TextBlock>
+                    <TextBlock>Женский</TextBlock>-->
                 </ComboBox>
                 <DatePicker Name ="DP_Date" materialDesign:HintAssist.Hint="Введите Дату Рождения" Style="{DynamicResource MaterialDesignFloatingHintDatePicker}"></DatePicker>
                 <ComboBox x:Name="CB_Role" materialDesign:HintAssist.Hint="Выберите Роль" Style="{DynamicResource MaterialDesignFloatingHintComboBox}">
-                    <TextBlock>Пользователь</TextBlock>
-                    <TextBlock>Администратор</TextBlock>
+                    <!--<TextBlock>Пользователь</TextBlock>
+                    <TextBlock>Администратор</TextBlock>-->
                 </ComboBox>
                 <Button HorizontalAlignment="Center" Margin="20" Content="Зарегистрироваться" Click ="Reg_Btn"></Button>
             </StackPanel>

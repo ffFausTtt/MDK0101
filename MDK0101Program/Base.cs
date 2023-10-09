@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace MDK0101Program
 {
-    internal class Base
+    class Base
     {
-        public static Entities dataBase;
-    }  
+        public static Entities1 dataBase = new Entities1();
+    }
 }
