@@ -13,10 +13,10 @@ namespace MDK0101Program
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Entities1 : DbContext
+    public partial class Entities : DbContext
     {
-        public Entities1()
-            : base("name=Entities1")
+        public Entities()
+            : base("name=Entities")
         {
         }
     
@@ -25,7 +25,11 @@ namespace MDK0101Program
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Autor> Autor { get; set; }
+        public virtual DbSet<Books> Books { get; set; }
         public virtual DbSet<Gender> Gender { get; set; }
+        public virtual DbSet<Genre> Genre { get; set; }
+        public virtual DbSet<GenreBooks> GenreBooks { get; set; }
         public virtual DbSet<Role> Role { get; set; }
         public virtual DbSet<User> User { get; set; }
     }

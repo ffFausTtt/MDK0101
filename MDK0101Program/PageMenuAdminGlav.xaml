@@ -18,7 +18,8 @@
 
                 <Grid Margin="0 0 0 20">
                     <Button Background="Plum" HorizontalAlignment="Center" Content="Просмотр данных о зарегистрированных пользователях" Click="BtnInf_Click"></Button>
-                    <Button Background="Plum" HorizontalAlignment="Center" Margin="0,100,0,0" Content="Назад" Click="OnGlav_Btn"></Button>
+                    <Button Background="Plum" HorizontalAlignment="Center" Margin="0,200,0,0" Content="Назад" Click="OnGlav_Btn"></Button>
+                    <Button Background="Plum" HorizontalAlignment="Center" Margin="0,100,0,0" Content="Просмотр книг" Click="Btn_Book"></Button>
                 </Grid>
             </StackPanel>
         </Border>

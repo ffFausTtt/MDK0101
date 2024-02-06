@@ -32,5 +32,10 @@ namespace MDK0101Program
         {
             NavigationService.Navigate(new PageAvt());
         }
+
+        private void Btn_Book(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new PageBook());
+        }
     }
 }

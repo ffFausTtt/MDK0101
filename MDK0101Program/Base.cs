@@ -8,6 +8,6 @@ namespace MDK0101Program
 {
     class Base
     {
-        public static Entities1 dataBase = new Entities1();
+        public static Entities dataBase = new Entities();
     }
 }
